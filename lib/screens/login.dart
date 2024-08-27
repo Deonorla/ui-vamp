@@ -14,101 +14,201 @@ class Login extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(
-                    'assets/images/peakpx.jpg'), // Replace with your image path
+                image: AssetImage('assets/images/peakpx.jpg'),
                 fit: BoxFit.cover,
               ),
             ),
           ),
           // Login Form
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Container(
-              width: screenWidth / 2.5,
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.8),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Text(
-                    'Hypi',
-                    style: TextStyle(
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
+          Padding(
+            padding: const EdgeInsets.only(left: 60),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Container(
+                width: screenWidth / 2.5,
+                padding: const EdgeInsets.all(40),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Text(
+                      'Hypi',
+                      style: TextStyle(
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 20),
-                  SizedBox(
-                    width: double.infinity,
-                    child: ElevatedButton.icon(
+                    const SizedBox(height: 20),
+                    const Text(
+                      'Login or Register to manage your licence',
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
                         onPressed: () {},
-                        icon: const Icon(
-                          Icons.facebook,
-                        ),
-                        label: const Text('Facebook'),
                         style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
                             fixedSize: const Size(double.infinity, 50),
-                            // padding: const EdgeInsets.all(10),
+                            side:
+                                const BorderSide(color: Colors.black, width: 1),
                             alignment: Alignment.centerLeft,
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8)))),
-                  ),
-                  const SizedBox(height: 20),
-                  SizedBox(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          fixedSize: const Size(double.infinity, 50),
-                          // padding: const EdgeInsets.all(10),
-                          alignment: Alignment.centerLeft,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8))),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Image.asset('assets/images/google.png'),
-                          const SizedBox(width: 8),
-                          const Text('Google')
-                        ],
+                                borderRadius: BorderRadius.circular(8))),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              'assets/images/Facebook.png',
+                              width: 18,
+                              height: 18,
+                            ),
+                            const SizedBox(width: 8),
+                            const Text('Facebook',
+                                style: TextStyle(color: Colors.black))
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  const SizedBox(height: 20),
-                  ElevatedButton(
-                    onPressed: () {},
-                    child: Text('Login'),
-                  ),
-                  SizedBox(height: 20),
-                  Text('Or login with'),
-                  SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(
-                        icon: Icon(Icons.facebook),
+                    const SizedBox(height: 20),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
                         onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            fixedSize: const Size(double.infinity, 50),
+                            side:
+                                const BorderSide(color: Colors.black, width: 1),
+                            alignment: Alignment.centerLeft,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8))),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              'assets/images/google.png',
+                              width: 18,
+                              height: 18,
+                            ),
+                            const SizedBox(width: 8),
+                            const Text('Google',
+                                style: TextStyle(color: Colors.black))
+                          ],
+                        ),
                       ),
-                      IconButton(
-                        icon: Icon(Icons.mail),
+                    ),
+                    const SizedBox(height: 20),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
                         onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            fixedSize: const Size(double.infinity, 50),
+                            side:
+                                const BorderSide(color: Colors.black, width: 1),
+                            alignment: Alignment.centerLeft,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8))),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              'assets/images/github.png',
+                              width: 18,
+                              height: 18,
+                            ),
+                            const SizedBox(width: 8),
+                            const Text('Github',
+                                style: TextStyle(color: Colors.black))
+                          ],
+                        ),
                       ),
-                      IconButton(
-                        icon: Icon(Icons.code),
+                    ),
+                    const SizedBox(height: 20),
+                    const Center(
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 20.0),
+                        child: Row(
+                          children: <Widget>[
+                            Expanded(
+                              child: Divider(
+                                color: Colors.black,
+                                thickness: 0.1,
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 8.0),
+                              child: Text("OR"),
+                            ),
+                            Expanded(
+                              child: Divider(
+                                color: Colors.black,
+                                thickness: 0.1,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
                         onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            fixedSize: const Size(double.infinity, 50),
+                            side:
+                                const BorderSide(color: Colors.black, width: 1),
+                            alignment: Alignment.center,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8))),
+                        child: const Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text('Continue with email',
+                                style: TextStyle(color: Colors.black))
+                          ],
+                        ),
                       ),
-                    ],
-                  ),
-                  SizedBox(height: 20),
-                  TextButton(
-                    onPressed: () {},
-                    child: Text('Create an account'),
-                  ),
-                ],
+                    ),
+                    const SizedBox(height: 20),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        RichText(
+                          text: const TextSpan(
+                              text: "New to Hypi?",
+                              style: TextStyle(
+                                fontSize: 10,
+                                color: Colors.black,
+                              ),
+                              children: <TextSpan>[
+                                TextSpan(
+                                  text: " Create an account",
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      color: Colors.green,
+                                      decoration: TextDecoration.underline,
+                                      decorationColor: Colors.green,
+                                      decorationThickness: 2),
+                                )
+                              ]),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
